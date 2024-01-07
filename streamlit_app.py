@@ -124,7 +124,7 @@ if uploaded_file is not None:
 
     listdata = [data1, data2, data3, data4, data5, data6, data7, data8, data9, 
                 data10, data11, data12, data13, data14, data15]
-    x = pd.concat(listdata, axis=1, ignore_index=True)
+    x = pd.concat(listdata, axis=1)
     
     st.write(x) 
     y_prediksi = knn.predict(x)
