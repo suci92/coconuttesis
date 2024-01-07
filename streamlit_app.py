@@ -126,8 +126,11 @@ if uploaded_file is not None:
                 data10, data11, data12, data13, data14, data15]
     x = pd.concat(listdata, axis=1)
     
+    
     st.write(x) 
+    
     y_prediksi = knn.predict(x)
+    y_prdiksi = y_prediksi.reshape(len(y))
     
     if y_prediksi == 0:
         st.write("<p style='text-align: center;'><center>Kelapa Standar</center></p>", unsafe_allow_html=True)
