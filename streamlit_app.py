@@ -130,7 +130,7 @@ if uploaded_file is not None:
     st.write(x) 
     
     y_prediksi = knn.predict(x)
-    y_prdiksi = y_prediksi.reshape(len(y))
+    y_prdiksi = y_prediksi.reshape(len(y_prediksi))
     
     if y_prediksi == 0:
         st.write("<p style='text-align: center;'><center>Kelapa Standar</center></p>", unsafe_allow_html=True)
