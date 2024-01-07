@@ -29,7 +29,7 @@ os.makedirs('temps/', exist_ok=True)
 # check if the file is uploaded
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-if  image ='*.jpg'
+if  image='*.jpg'
     temp_image_path = 'temps/temp_image.jpg'
 else
     temp_image_path = 'temps/temp_image.png'
