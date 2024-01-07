@@ -132,9 +132,9 @@ if uploaded_file is not None:
     y_prediksi = knn.predict(x)
     y_prdiksi = y_prediksi.reshape(len(y_prediksi))
     
-    if y_prediksi == 1:
+    if y_prediksi <= 0:
         st.write("<p style='text-align: center;'><center>Kelapa Standar</center></p>", unsafe_allow_html=True)
-    elif y_prediksi == 0:
+    elif y_prediksi >= 1:
         st.write("<p style='text-align: center;'><center>Kelapa Tidak Standar</center></p>", unsafe_allow_html=True)
     else:
         st.write("<p style='text-align: center;'><center>error</center></p>", unsafe_allow_html=True)
