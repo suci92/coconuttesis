@@ -126,12 +126,9 @@ if uploaded_file is not None:
                 data10, data11, data12, data13, data14, data15]
     x = pd.concat(listdata, axis=1)
     
-    min_max_scaler = MinMaxScaler()
-    x_minmax= pd.DataFrame(min_max_scaler.fit_transform(x))
+    st.write(x) 
     
-    st.write(x_minmax) 
-    
-    y_prediksi = knn.predict(x_minmax)
+    y_prediksi = knn.predict(x)
     
     if y_prediksi == 0:
         st.write("<p style='text-align: center;'><center>Kelapa Standar</center></p>", unsafe_allow_html=True)
