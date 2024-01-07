@@ -29,14 +29,7 @@ os.makedirs('temps/', exist_ok=True)
 # check if the file is uploaded
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    
-if temp_image_path.lower().endswith('.jpg') or temp_image_path.lower().endswith('.jpeg'):
     temp_image_path = 'temps/temp_image.jpg'
-elif image_path.lower().endswith('.png'):
-    temp_image_path = 'temps/temp_image.png'
-else:
-    # Jika bukan format yang diharapkan, atur temp_image_path ke nilai default
-    temp_image_path = 'temps/temp_image_default.png'  # Atur ke path default yang diinginkan
     image.save(temp_image_path)
     st.image(image, caption='Uploaded Image', use_column_width=True)
     
