@@ -18,7 +18,9 @@ model = open("knn_coconut_not_min_max.pkl", "rb")
 knn = joblib.load(model)
 
 # create title
-st.title("Coconut Quality Classification App")
+st.write("<h1 style='text-align: center;'>Coconut Quality Classification</h1>", unsafe_allow_html=True)
+st.write("<h1 style='text-align: center;'> Sucinda Kardena</h1>", unsafe_allow_html=True)
+st.write("<h1 style='text-align: center;'>2111602161</h1>", unsafe_allow_html=True)
 
 # upload image
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
